@@ -1,0 +1,421 @@
+/* =========================
+   MONETIQ Global Website
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #2F5BFF;
+  --secondary: #6C4DFF;
+  --accent: #00C2FF;
+  --text: #101828;
+  --text-light: #475467;
+  --border: #EAECF0;
+  --bg: #F8FAFC;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   Header
+   ========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(248,250,252,.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 42px;
+  align-items: center;
+}
+
+.nav-menu a {
+  font-weight: 500;
+  transition: .3s;
+}
+
+.nav-menu a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+  border-radius: 14px;
+
+  color: white;
+  font-weight: 600;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  box-shadow: 0 12px 30px rgba(47,91,255,.18);
+
+  transition: .3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+
+  font-weight: 600;
+  background: white;
+
+  transition: .3s;
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+.hero {
+  min-height: 88vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 68px;
+  line-height: 1.08;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--text-light);
+
+  margin-bottom: 40px;
+  max-width: 620px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+}
+
+/* Visual */
+.hero-visual {
+  position: relative;
+
+  min-height: 560px;
+  border-radius: 32px;
+
+  background: linear-gradient(
+    135deg,
+    #EEF2FF,
+    #F5F3FF
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.ai-chip {
+  width: 200px;
+  height: 200px;
+
+  border-radius: 32px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 48px;
+  font-weight: 800;
+  color: white;
+
+  box-shadow:
+    0 20px 80px rgba(47,91,255,.22);
+}
+
+/* =========================
+   Metrics
+   ========================= */
+
+.metrics {
+  padding: 100px 0;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 24px;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 24px;
+
+  padding: 36px;
+
+  box-shadow:
+    0 10px 30px rgba(16,24,40,.05);
+}
+
+.metric-number {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--primary);
+
+  margin-bottom: 8px;
+}
+
+.metric-label {
+  color: var(--text-light);
+}
+
+/* =========================
+   Sections
+   ========================= */
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-light);
+
+  max-width: 700px;
+  margin: auto auto 60px auto;
+}
+
+/* Feature Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 28px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px;
+  border-radius: 28px;
+
+  box-shadow:
+    0 10px 30px rgba(16,24,40,.05);
+
+  transition: .3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-card h3 {
+  margin-bottom: 14px;
+  font-size: 24px;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* =========================
+   Contact
+   ========================= */
+
+.contact-box {
+  background: white;
+  border-radius: 32px;
+  padding: 60px;
+
+  box-shadow:
+    0 10px 30px rgba(16,24,40,.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  border-radius: 14px;
+  border: 1px solid var(--border);
+
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+.footer {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-links a {
+  color: var(--text-light);
+}
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 992px) {
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+
+}

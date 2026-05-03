@@ -1,0 +1,450 @@
+/* ===================================
+   MONETIQ SECTION MODULES
+=================================== */
+
+/* ===================================
+   METRICS SECTION
+=================================== */
+
+.metrics-section {
+  padding: 80px 0 100px;
+}
+
+.metrics-grid {
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+
+}
+
+.metric-card {
+
+  text-align: center;
+
+}
+
+.metric-number {
+
+  font-size: 42px;
+  font-weight: 800;
+
+  margin-bottom: 10px;
+
+}
+
+.metric-label {
+
+  font-size: 16px;
+
+}
+
+/* ===================================
+   ABOUT SECTION
+=================================== */
+
+.about-section {
+  padding: 120px 0;
+}
+
+.about-wrapper {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+  align-items: center;
+
+}
+
+.about-image img {
+
+  border-radius: 28px;
+
+  box-shadow: var(--shadow-md);
+
+}
+
+.about-content h2 {
+
+  margin-bottom: 24px;
+
+}
+
+.about-content p {
+
+  margin-bottom: 32px;
+
+}
+
+.about-stats {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+}
+
+.stat-box {
+
+  background: white;
+
+  padding: 24px;
+
+  border-radius: 18px;
+
+  box-shadow: var(--shadow-sm);
+
+}
+
+.stat-box h3 {
+
+  color: var(--primary);
+
+  margin-bottom: 8px;
+
+}
+
+/* ===================================
+   FEATURES SECTION
+=================================== */
+
+.features-section {
+  padding: 120px 0;
+}
+
+.features-grid {
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 30px;
+
+}
+
+.feature-card {
+
+  background: white;
+
+  padding: 42px;
+
+  border-radius: 28px;
+
+  box-shadow: var(--shadow-sm);
+
+  transition: .3s;
+
+}
+
+.feature-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow-md);
+
+}
+
+.feature-icon {
+
+  width: 60px;
+  height: 60px;
+
+  margin-bottom: 24px;
+
+}
+
+.feature-card h3 {
+
+  margin-bottom: 16px;
+
+}
+
+.feature-card p {
+
+  margin-bottom: 20px;
+
+}
+
+.feature-link {
+
+  color: var(--primary);
+
+  font-weight: 600;
+
+}
+
+/* ===================================
+   CONTENT MONETIZATION
+=================================== */
+
+.content-section {
+
+  background: white;
+
+}
+
+.content-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.content-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: linear-gradient(
+    180deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+}
+
+/* ===================================
+   AD MONETIZATION
+=================================== */
+
+.ad-section {
+
+  background: var(--bg);
+
+}
+
+.ad-grid {
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 30px;
+
+}
+
+.ad-card {
+
+  position: relative;
+
+}
+
+.ad-card h3 {
+
+  margin-bottom: 16px;
+
+}
+
+.ad-card ul {
+
+  margin-top: 20px;
+
+}
+
+.ad-card li {
+
+  margin-bottom: 12px;
+
+  color: var(--gray);
+
+}
+
+/* ===================================
+   CASE STUDY
+=================================== */
+
+.case-section {
+
+  padding: 120px 0;
+
+}
+
+.case-grid {
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 24px;
+
+}
+
+.case-card {
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 36px;
+
+  box-shadow: var(--shadow-sm);
+
+}
+
+.case-logo {
+
+  width: 100px;
+
+  margin-bottom: 24px;
+
+}
+
+.case-quote {
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  margin-bottom: 24px;
+
+}
+
+.case-author {
+
+  font-size: 15px;
+
+  color: var(--gray);
+
+}
+
+/* ===================================
+   CTA BANNER
+=================================== */
+
+.cta-section {
+
+  padding: 100px 0;
+
+}
+
+.cta-banner {
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  border-radius: 32px;
+
+  padding: 80px;
+
+  text-align: center;
+
+  color: white;
+
+}
+
+.cta-banner h2 {
+
+  color: white;
+
+  margin-bottom: 20px;
+
+}
+
+.cta-banner p {
+
+  color: rgba(255,255,255,.85);
+
+  max-width: 700px;
+
+  margin: auto auto 40px auto;
+
+}
+
+/* ===================================
+   CONTACT
+=================================== */
+
+.contact-section {
+
+  padding: 120px 0;
+
+}
+
+.contact-wrapper {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+
+}
+
+.contact-info h2 {
+
+  margin-bottom: 24px;
+
+}
+
+.contact-info p {
+
+  margin-bottom: 40px;
+
+}
+
+.contact-list div {
+
+  margin-bottom: 20px;
+
+  color: var(--gray);
+
+}
+
+.contact-form {
+
+  background: white;
+
+  padding: 50px;
+
+  border-radius: 28px;
+
+  box-shadow: var(--shadow-sm);
+
+}
+
+/* ===================================
+   TRUSTED LOGOS
+=================================== */
+
+.logo-section {
+
+  padding: 60px 0;
+
+}
+
+.logo-grid {
+
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+
+  gap: 30px;
+
+  align-items: center;
+
+}
+
+.logo-item {
+
+  opacity: .6;
+
+  transition: .3s;
+
+}
+
+.logo-item:hover {
+
+  opacity: 1;
+
+}

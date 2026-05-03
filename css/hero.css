@@ -1,0 +1,266 @@
+/* ===================================
+   MONETIQ HERO SECTION
+=================================== */
+
+.hero {
+
+  position: relative;
+
+  min-height: 92vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+
+  padding: 40px 0 80px;
+
+}
+
+/* Left Content */
+
+.hero-content {
+
+  position: relative;
+  z-index: 2;
+
+}
+
+.hero-badge {
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 10px 18px;
+
+  border-radius: 100px;
+
+  background: rgba(47,91,255,.08);
+
+  color: var(--primary);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 30px;
+
+}
+
+.hero-title {
+
+  max-width: 650px;
+
+  margin-bottom: 28px;
+
+}
+
+.hero-subtitle {
+
+  max-width: 580px;
+
+  margin-bottom: 40px;
+
+}
+
+.hero-buttons {
+
+  display: flex;
+  gap: 18px;
+
+}
+
+/* Right Visual */
+
+.hero-visual {
+
+  position: relative;
+
+  min-height: 580px;
+
+  border-radius: 32px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #EEF2FF,
+    #F5F3FF
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Main Visual */
+
+.hero-main-image {
+
+  width: 80%;
+  max-width: 500px;
+
+  position: relative;
+  z-index: 2;
+
+}
+
+/* AI Core */
+
+.ai-core {
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 36px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  font-size: 52px;
+  font-weight: 800;
+
+  box-shadow:
+    0 30px 100px rgba(47,91,255,.25);
+
+}
+
+/* Floating Cards */
+
+.float-card {
+
+  position: absolute;
+
+  background: white;
+
+  padding: 20px 24px;
+
+  border-radius: 20px;
+
+  box-shadow: var(--shadow-md);
+
+  z-index: 3;
+
+}
+
+.float-card h4 {
+
+  font-size: 18px;
+
+  margin-bottom: 6px;
+
+}
+
+.float-card p {
+
+  font-size: 14px;
+
+}
+
+/* Revenue Card */
+
+.revenue-card {
+
+  top: 60px;
+  right: 40px;
+
+}
+
+/* Growth Card */
+
+.growth-card {
+
+  bottom: 80px;
+  left: 40px;
+
+}
+
+/* Traffic Card */
+
+.traffic-card {
+
+  bottom: 40px;
+  right: 60px;
+
+}
+
+/* Background Effects */
+
+.hero-glow {
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+
+  background: rgba(108,77,255,.12);
+
+  filter: blur(80px);
+
+}
+
+.glow-1 {
+
+  top: -80px;
+  right: -80px;
+
+}
+
+.glow-2 {
+
+  bottom: -120px;
+  left: -120px;
+
+}
+
+/* Trusted Text */
+
+.hero-trust {
+
+  margin-top: 60px;
+
+}
+
+.hero-trust span {
+
+  color: var(--gray);
+
+  font-size: 15px;
+
+  display: block;
+
+  margin-bottom: 20px;
+
+}
+
+.trust-logos {
+
+  display: flex;
+  gap: 30px;
+
+  align-items: center;
+
+}
+
+.trust-logos img {
+
+  height: 24px;
+
+  width: auto;
+
+  opacity: .6;
+
+}

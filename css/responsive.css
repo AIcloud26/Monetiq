@@ -1,0 +1,211 @@
+/* ===================================
+   TABLET
+=================================== */
+
+@media (max-width: 1200px) {
+
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+}
+
+/* ===================================
+   TABLET SMALL
+=================================== */
+
+@media (max-width: 992px) {
+
+  /* Navigation */
+
+  .nav-menu {
+    display: none;
+  }
+
+  /* Hero */
+
+  .hero {
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    text-align: center;
+
+    padding-top: 60px;
+
+  }
+
+  .hero-title,
+  .hero-subtitle {
+
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .hero-buttons {
+
+    justify-content: center;
+
+  }
+
+  /* Sections */
+
+  .about-wrapper,
+  .contact-wrapper {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .features-grid,
+  .ad-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .metrics-grid {
+
+    grid-template-columns: repeat(2,1fr);
+
+  }
+
+  .case-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .logo-grid {
+
+    grid-template-columns: repeat(3,1fr);
+
+  }
+
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  /* Hero */
+
+  .hero {
+
+    min-height: auto;
+
+  }
+
+  .hero-buttons {
+
+    flex-direction: column;
+
+  }
+
+  .hero-visual {
+
+    min-height: 420px;
+
+  }
+
+  .ai-core {
+
+    width: 160px;
+    height: 160px;
+
+    font-size: 36px;
+
+  }
+
+  .float-card {
+
+    display: none;
+
+  }
+
+  /* Grid */
+
+  .metrics-grid,
+  .about-stats,
+  .logo-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .feature-card,
+  .contact-form {
+
+    padding: 30px;
+
+  }
+
+  .cta-banner {
+
+    padding: 50px 30px;
+
+  }
+
+}
+
+/* ===================================
+   SMALL MOBILE
+=================================== */
+
+@media (max-width: 480px) {
+
+  .container {
+
+    padding: 0 20px;
+
+  }
+
+  .logo {
+
+    font-size: 26px;
+
+  }
+
+  h1 {
+
+    font-size: 34px;
+
+  }
+
+  .btn-primary,
+  .btn-outline {
+
+    width: 100%;
+
+  }
+
+}

@@ -1,0 +1,151 @@
+/* ===================================
+   MONETIQ ANIMATIONS
+   Version: 1.0
+=================================== */
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Float */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 30px 100px rgba(47, 91, 255, 0.25); }
+  50% { box-shadow: 0 30px 120px rgba(47, 91, 255, 0.4); }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide In Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply Animations */
+.hero-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-visual {
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.ai-core {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.float-card {
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.float-card:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.float-card:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.metric-card {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.metric-card:nth-child(1) { animation-delay: 0.1s; }
+.metric-card:nth-child(2) { animation-delay: 0.2s; }
+.metric-card:nth-child(3) { animation-delay: 0.3s; }
+.metric-card:nth-child(4) { animation-delay: 0.4s; }
+
+.feature-card {
+  animation: scaleIn 0.5s ease-out both;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+.case-card {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.case-card:nth-child(1) { animation-delay: 0.1s; }
+.case-card:nth-child(2) { animation-delay: 0.25s; }
+.case-card:nth-child(3) { animation-delay: 0.4s; }
+
+.cta-banner {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.contact-form {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.contact-info {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Smooth Scroll Reveal (progressive enhancement) */
+.section-title,
+.section-subtitle {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.about-content {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.about-image {
+  animation: slideInLeft 0.8s ease-out;
+}

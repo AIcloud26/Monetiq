@@ -57,7 +57,7 @@
       50% { transform: translateY(-15px); }
     }
     @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+      0%, 100% { box-shadow: 0 0 20px rgba(10, 132, 255, 0.3); }
       50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.5); }
     }
     .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
@@ -75,7 +75,7 @@
     }
     .card-hover:hover {
       transform: translateY(-8px);
-      box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.25);
+      box-shadow: 0 25px 50px -12px rgba(10, 132, 255, 0.25);
     }
     
     /* 渐变文字 */
@@ -89,8 +89,8 @@
     /* 背景网格 */
     .bg-grid {
       background-image: 
-        linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(10, 132, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10, 132, 255, 0.05) 1px, transparent 1px);
       background-size: 50px 50px;
     }
   </style>
@@ -101,10 +101,9 @@
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <!-- LOGO -->
-        <a href="#" class="flex items-center gap-3">
-          <img class="site-logo" src="logo.png" alt="HiCloud Insight" style="height: 32px; width: auto;">
-          <span class="site-name text-xl font-bold gradient-text">HiCloud Insight</span>
+        <!-- LOGO（仅图片，图片本身已含文字） -->
+        <a href="#">
+          <img class="site-logo" src="logo.png" alt="HiCloud Insight" style="height: 40px; width: auto;">
         </a>
         
         <!-- 导航链接 -->
@@ -617,15 +616,15 @@
     </div>
   </section>
 
-  <!-- ========== Footer ========== -->
+   <!-- ========== Footer ========== -->
   <footer class="bg-gray-900 text-white pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div class="lg:col-span-1">
-          <div class="flex items-center gap-3 mb-6">
-            <img class="site-logo" src="logo.png" alt="HiCloud Insight" style="height: 28px; width: auto;">
-            <span class="site-name text-xl font-bold">HiCloud Insight</span>
-          </div>
+          <!-- LOGO（仅图片，彩色LOGO在深色背景直接显示） -->
+          <a href="#" class="inline-block mb-6">
+            <img class="site-logo" src="logo.png" alt="HiCloud Insight" style="height: 36px; width: auto;">
+          </a>
           <p class="text-gray-400 leading-relaxed mb-6">
             Empowering businesses worldwide with AI-driven marketing solutions 
             and cloud infrastructure excellence.

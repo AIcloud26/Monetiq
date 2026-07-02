@@ -9,24 +9,29 @@ window.SITE_CONFIG = {
   
   // LOGO 配置
   logo: {
-    src: "logo.png",       // LOGO 图片路径，换LOGO直接替换图片文件即可
+    src: "logo.png",
     alt: "HiCloud Insight",
-    width: "32px",         // 导航栏 LOGO 高度
-    footerWidth: "28px",   // 页脚 LOGO 高度
+    navHeight: "48px",       // 导航栏 LOGO 高度（已适配网站尺寸）
   },
   
-  // 配色系统（蓝紫科技风，匹配 LOGO）
+  // 配色系统（蓝色系，用户确认版本）
   colors: {
-    primary: "#6366F1",    // 主色：靛蓝
-    secondary: "#8B5CF6",  // 次色：紫罗兰
-    accent: "#A855F7",     // 强调色：紫
-    dark: "#1E1B4B",       // 深色背景
-    darkLight: "#312E81",  // 深色悬浮
-    gradient: "from-[#6366F1] via-[#8B5CF6] to-[#A855F7]", // Tailwind 渐变类
+    primary: "#2563EB",      // 主品牌蓝
+    secondary: "#3B82F6",    // 次级蓝
+    light: "#60A5FA",        // 浅科技蓝
+    accent: "#38BDF8",       // 青蓝Accent
+    dark: "#0F172A",         // 深海军蓝
+    darkLight: "#1E293B",    // 深色悬浮
+    pageBg: "#F8FAFC",       // 页面背景
+    cardBg: "#FFFFFF",       // 卡片背景
+    textPrimary: "#111827",  // 主文字
+    textSecondary: "#64748B",// 次文字
+    gradient: "from-[#2563EB] via-[#3B82F6] to-[#60A5FA]",
+    gradientCSS: "linear-gradient(135deg, #2563EB 0%, #3B82F6 50%, #60A5FA 100%)",
   },
 };
 
-// 立即注入 CSS 变量（确保样式优先加载，避免闪烁）
+// 立即注入 CSS 变量
 (function() {
   var c = window.SITE_CONFIG.colors;
   var style = document.createElement("style");
@@ -34,21 +39,26 @@ window.SITE_CONFIG = {
     :root {
       --color-primary: ${c.primary};
       --color-secondary: ${c.secondary};
+      --color-light: ${c.light};
       --color-accent: ${c.accent};
       --color-dark: ${c.dark};
       --color-dark-light: ${c.darkLight};
+      --color-page-bg: ${c.pageBg};
+      --color-card-bg: ${c.cardBg};
+      --color-text-primary: ${c.textPrimary};
+      --color-text-secondary: ${c.textSecondary};
     }
     .bg-gradient-brand {
-      background: linear-gradient(135deg, ${c.primary} 0%, ${c.secondary} 50%, ${c.accent} 100%);
+      background: ${c.gradientCSS};
     }
     .text-gradient-brand {
-      background: linear-gradient(135deg, ${c.primary}, ${c.accent});
+      background: ${c.gradientCSS};
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .hover\:text-gradient-brand:hover {
-      background: linear-gradient(135deg, ${c.primary}, ${c.accent});
+    .hover\\:text-gradient-brand:hover {
+      background: ${c.gradientCSS};
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -57,26 +67,17 @@ window.SITE_CONFIG = {
   document.head.appendChild(style);
 })();
 
-// DOM 加载完成后替换 LOGO 和文字
+// DOM 加载完成后替换 LOGO
 document.addEventListener("DOMContentLoaded", function() {
   var cfg = window.SITE_CONFIG;
   
-  // 替换所有 .site-logo 图片
+  // 只处理导航栏的 LOGO（Footer 已改为文字品牌名）
   document.querySelectorAll(".site-logo").forEach(function(img) {
     img.src = cfg.logo.src;
     img.alt = cfg.logo.alt;
-    if (img.closest("footer")) {
-      img.style.height = cfg.logo.footerWidth;
-    } else {
-      img.style.height = cfg.logo.width;
-    }
+    img.style.height = cfg.logo.navHeight;
     img.style.width = "auto";
     img.style.display = "block";
-  });
-  
-  // 替换站点名称
-  document.querySelectorAll(".site-name").forEach(function(el) {
-    el.textContent = cfg.siteName;
   });
   
   // 更新页面标题

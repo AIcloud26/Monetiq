@@ -11,8 +11,8 @@ window.SITE_CONFIG = {
   logo: {
     src: "logo.png",       // LOGO 图片路径，换LOGO直接替换图片文件即可
     alt: "HiCloud Insight",
-    width: "60px",         // 导航栏 LOGO 高度（已从32px调大适配网站）
-    footerWidth: "28px",   // 页脚已改为纯文字品牌名，此字段保留备用
+    width: "72px",         // 导航栏 LOGO 高度（已从32px调大适配网站）
+    footerWidth: "30px",   // 页脚已改为纯文字品牌名，此字段保留备用
   },
   
   // 配色系统（蓝紫科技风，匹配 LOGO）

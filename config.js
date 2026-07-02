@@ -9,22 +9,20 @@ window.SITE_CONFIG = {
   
   // LOGO 配置
   logo: {
-    src: "logo.png",
+    src: "logo.png",       // LOGO 图片路径，换LOGO直接替换图片文件即可
     alt: "HiCloud Insight",
-    width: "32px",
-    footerWidth: "28px",
+    width: "32px",         // 导航栏 LOGO 高度
+    footerWidth: "28px",   // 页脚 LOGO 高度
   },
   
-  // 配色系统（蓝紫渐变，与LOGO一致：H图标蓝色 → 文字紫色）
+  // 配色系统（蓝紫科技风，匹配 LOGO）
   colors: {
-    primary: "#0A84FF",      // 主色：亮蓝（匹配LOGO的H图标）
-    secondary: "#5E5CE6",    // 次色：靛蓝紫（过渡色）
-    accent: "#8B5CF6",       // 强调色：紫罗兰（匹配LOGO文字）
-    dark: "#0F172A",         // 深色背景（深蓝灰，呼应蓝色主调）
-    darkLight: "#1E293B",    // 深色悬浮
-    gradientStart: "#0A84FF",
-    gradientMid: "#5E5CE6",
-    gradientEnd: "#8B5CF6",
+    primary: "#6366F1",    // 主色：靛蓝
+    secondary: "#8B5CF6",  // 次色：紫罗兰
+    accent: "#A855F7",     // 强调色：紫
+    dark: "#1E1B4B",       // 深色背景
+    darkLight: "#312E81",  // 深色悬浮
+    gradient: "from-[#6366F1] via-[#8B5CF6] to-[#A855F7]", // Tailwind 渐变类
   },
 };
 
@@ -41,16 +39,16 @@ window.SITE_CONFIG = {
       --color-dark-light: ${c.darkLight};
     }
     .bg-gradient-brand {
-      background: linear-gradient(135deg, ${c.gradientStart} 0%, ${c.gradientMid} 50%, ${c.gradientEnd} 100%);
+      background: linear-gradient(135deg, ${c.primary} 0%, ${c.secondary} 50%, ${c.accent} 100%);
     }
     .text-gradient-brand {
-      background: linear-gradient(135deg, ${c.gradientStart}, ${c.gradientEnd});
+      background: linear-gradient(135deg, ${c.primary}, ${c.accent});
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     .hover\:text-gradient-brand:hover {
-      background: linear-gradient(135deg, ${c.gradientStart}, ${c.gradientEnd});
+      background: linear-gradient(135deg, ${c.primary}, ${c.accent});
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
